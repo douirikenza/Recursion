@@ -1,0 +1,30 @@
+ALGORITHM algorithm_palindrome2
+// récursivité au programme pricipal
+VAR
+    
+    ch : String;
+    Function Palindrome (ch : String) : Boolean;
+    
+    if length(ch) < 2 
+    then Palindrome := True
+
+    else
+    if (ch[1] = ch[length(ch)])
+    then Palindrome := Palindrome (Copy (ch, 2, Length (ch) - 2))
+    else 
+    Palindrome := False;
+    end if 
+
+BEGIN
+    write ("Donner ch = "); 
+    read (ch);
+    if Palindrome (ch) then write (ch, "votre chaine est un palindrome")
+    else
+    write (ch, "votre chaine nest pas un palindrome.");
+END
+
+
+
+
+
+
